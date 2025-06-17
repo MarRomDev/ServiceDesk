@@ -8,8 +8,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="522a2c6c-2cce-47ea-a37a-0f8f54c4ac6a" name="Changes" comment="init projects">
+    <list default="true" id="522a2c6c-2cce-47ea-a37a-0f8f54c4ac6a" name="Changes" comment="remove default classes">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ServiceDesk/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ServiceDesk/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ServiceDesk.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceDesk.Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServiceDesk.Api/ServiceDesk.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceDesk.Api/ServiceDesk.Api.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServiceDesk.Application/ServiceDesk.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceDesk.Application/ServiceDesk.Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServiceDesk.Application/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceDesk.Application/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServiceDesk.Domain/ServiceDesk.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceDesk.Domain/ServiceDesk.Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServiceDesk.Domain/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceDesk.Domain/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServiceDesk.Infrastructure/ServiceDesk.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceDesk.Infrastructure/ServiceDesk.Infrastructure.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServiceDesk.Infrastructure/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceDesk.Infrastructure/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServiceDesk.Persistence/ServiceDesk.Persistence.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceDesk.Persistence/ServiceDesk.Persistence.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServiceDesk.Persistence/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceDesk.Persistence/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServiceDesk.Tests/ServiceDesk.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceDesk.Tests/ServiceDesk.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServiceDesk.Tests/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceDesk.Tests/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +36,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "MarRomDev"
+  }
+}]]></component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/MarRomDev/ServiceDesk.git",
@@ -96,7 +114,7 @@
       <option name="presentableId" value="Default" />
       <updated>1750157111471</updated>
       <workItem from="1750157112771" duration="565000" />
-      <workItem from="1750157720927" duration="582000" />
+      <workItem from="1750157720927" duration="1914000" />
     </task>
     <task id="LOCAL-00001" summary="init projects">
       <option name="closed" value="true" />
@@ -106,7 +124,23 @@
       <option name="project" value="LOCAL" />
       <updated>1750158080375</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="clean up program.cs in api">
+      <option name="closed" value="true" />
+      <created>1750158333442</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1750158333442</updated>
+    </task>
+    <task id="LOCAL-00003" summary="remove default classes">
+      <option name="closed" value="true" />
+      <created>1750158412551</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1750158412551</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +151,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="init projects" />
-    <option name="LAST_COMMIT_MESSAGE" value="init projects" />
+    <MESSAGE value="clean up program.cs in api" />
+    <MESSAGE value="remove default classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove default classes" />
   </component>
 </project>
