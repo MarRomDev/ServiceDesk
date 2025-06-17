@@ -1,0 +1,69 @@
+# .NET
+bin/
+obj/
+*.user
+*.rsuser
+*.suo
+*.userprefs
+*.csproj.user
+*.dbmdl
+*.pdb
+*.cache
+*.log
+*.vs/
+.vscode/
+.env
+
+# Rider
+.idea/
+
+# Logs
+*.log
+
+# Paket
+.paket/
+paket-files/
+
+# ASP.NET publish output
+wwwroot/
+
+# Entity Framework
+Migrations/
+
+# Docker
+docker-compose.override.yml
+
+# node / Vue
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.*
+
+# npm / yarn / pnpm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Testing
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+
+# CI/CD secrets / tokens (przykładowo – jeśli robisz kopie lokalne)
+*.publishsettings
+*.key
+*.crt
+*.pem
+*.pfx
+*.secret
+*.token
+
+# Build outputs
+*.dll
+*.exe
+
+# Mac/Linux system
+.DS_Store
+Thumbs.db
