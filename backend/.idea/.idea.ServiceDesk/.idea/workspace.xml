@@ -8,10 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="522a2c6c-2cce-47ea-a37a-0f8f54c4ac6a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../.github/workflows/ci.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ServiceDesk/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ServiceDesk/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="522a2c6c-2cce-47ea-a37a-0f8f54c4ac6a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,7 +103,7 @@
       <updated>1750157111471</updated>
       <workItem from="1750157112771" duration="565000" />
       <workItem from="1750157720927" duration="1914000" />
-      <workItem from="1750932646018" duration="1746000" />
+      <workItem from="1750932646018" duration="2105000" />
     </task>
     <task id="LOCAL-00001" summary="init projects">
       <option name="closed" value="true" />
@@ -156,7 +153,23 @@
       <option name="project" value="LOCAL" />
       <updated>1750932748353</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="#1&#10;- add ci.yml file with configuration">
+      <option name="closed" value="true" />
+      <created>1750934858184</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1750934858184</updated>
+    </task>
+    <task id="LOCAL-00008" summary="#1&#10;- default test to check pipeline">
+      <option name="closed" value="true" />
+      <created>1750935092433</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1750935092433</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,7 +184,9 @@
     <MESSAGE value="remove default classes" />
     <MESSAGE value="init" />
     <MESSAGE value="change terminal" />
-    <option name="LAST_COMMIT_MESSAGE" value="change terminal" />
+    <MESSAGE value="#1&#10;- add ci.yml file with configuration" />
+    <MESSAGE value="#1&#10;- default test to check pipeline" />
+    <option name="LAST_COMMIT_MESSAGE" value="#1&#10;- default test to check pipeline" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
