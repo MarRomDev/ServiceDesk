@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kp6q3YFq/hE=",
+  "dgSpecHash": "RdmIbSMA//A=",
   "success": true,
   "projectFilePath": "D:\\Projekty\\ServiceDesk\\backend\\ServiceDesk.Tests\\ServiceDesk.Tests.csproj",
   "expectedPackageFiles": [
@@ -91,7 +91,7 @@
     "C:\\Users\\roman\\.nuget\\packages\\xunit.core\\2.4.2\\xunit.core.2.4.2.nupkg.sha512",
     "C:\\Users\\roman\\.nuget\\packages\\xunit.extensibility.core\\2.4.2\\xunit.extensibility.core.2.4.2.nupkg.sha512",
     "C:\\Users\\roman\\.nuget\\packages\\xunit.extensibility.execution\\2.4.2\\xunit.extensibility.execution.2.4.2.nupkg.sha512",
-    "C:\\Users\\roman\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.5\\xunit.runner.visualstudio.2.4.5.nupkg.sha512"
+    "C:\\Users\\roman\\.nuget\\packages\\xunit.runner.console\\2.9.3\\xunit.runner.console.2.9.3.nupkg.sha512"
   ],
   "logs": []
 }
