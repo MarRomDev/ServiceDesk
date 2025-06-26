@@ -9,6 +9,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="522a2c6c-2cce-47ea-a37a-0f8f54c4ac6a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.github/workflows/ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ServiceDesk/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ServiceDesk/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +54,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "feature/1-ci-pipeline",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -105,7 +106,7 @@
       <updated>1750157111471</updated>
       <workItem from="1750157112771" duration="565000" />
       <workItem from="1750157720927" duration="1914000" />
-      <workItem from="1750932646018" duration="87000" />
+      <workItem from="1750932646018" duration="1746000" />
     </task>
     <task id="LOCAL-00001" summary="init projects">
       <option name="closed" value="true" />
@@ -147,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750932480470</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="change terminal">
+      <option name="closed" value="true" />
+      <created>1750932748353</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1750932748353</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,7 +170,8 @@
     <MESSAGE value="clean up program.cs in api" />
     <MESSAGE value="remove default classes" />
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="change terminal" />
+    <option name="LAST_COMMIT_MESSAGE" value="change terminal" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
