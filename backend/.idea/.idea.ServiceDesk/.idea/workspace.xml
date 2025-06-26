@@ -8,20 +8,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="522a2c6c-2cce-47ea-a37a-0f8f54c4ac6a" name="Changes" comment="remove default classes">
+    <list default="true" id="522a2c6c-2cce-47ea-a37a-0f8f54c4ac6a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ServiceDesk/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ServiceDesk/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServiceDesk.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceDesk.Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServiceDesk.Api/ServiceDesk.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceDesk.Api/ServiceDesk.Api.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServiceDesk.Application/ServiceDesk.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceDesk.Application/ServiceDesk.Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServiceDesk.Application/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceDesk.Application/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServiceDesk.Domain/ServiceDesk.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceDesk.Domain/ServiceDesk.Domain.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServiceDesk.Domain/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceDesk.Domain/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServiceDesk.Infrastructure/ServiceDesk.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceDesk.Infrastructure/ServiceDesk.Infrastructure.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServiceDesk.Infrastructure/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceDesk.Infrastructure/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServiceDesk.Persistence/ServiceDesk.Persistence.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceDesk.Persistence/ServiceDesk.Persistence.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServiceDesk.Persistence/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceDesk.Persistence/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServiceDesk.Tests/ServiceDesk.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceDesk.Tests/ServiceDesk.Tests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServiceDesk.Tests/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceDesk.Tests/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,16 +24,16 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "MarRomDev"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MarRomDev&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/MarRomDev/ServiceDesk.git",
-    "accountId": "3842cd25-4017-4300-9fd1-e1434dca4011"
+    "accountId": "af3b2ade-80ee-4352-a329-a1d89d6c25b2"
   }
 }]]></component>
   <component name="HighlightingSettingsPerFile">
@@ -63,6 +51,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "develop",
     "node.js.detected.package.eslint": "true",
@@ -70,6 +59,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "terminal",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -115,6 +105,7 @@
       <updated>1750157111471</updated>
       <workItem from="1750157112771" duration="565000" />
       <workItem from="1750157720927" duration="1914000" />
+      <workItem from="1750932646018" duration="87000" />
     </task>
     <task id="LOCAL-00001" summary="init projects">
       <option name="closed" value="true" />
@@ -140,7 +131,23 @@
       <option name="project" value="LOCAL" />
       <updated>1750158412551</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="init">
+      <option name="closed" value="true" />
+      <created>1750932469484</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1750932469484</updated>
+    </task>
+    <task id="LOCAL-00005" summary="init">
+      <option name="closed" value="true" />
+      <created>1750932480470</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1750932480470</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +160,25 @@
     <MESSAGE value="init projects" />
     <MESSAGE value="clean up program.cs in api" />
     <MESSAGE value="remove default classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove default classes" />
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
