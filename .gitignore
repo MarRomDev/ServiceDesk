@@ -15,7 +15,7 @@ obj/
 .env
 
 # Rider
-*.idea/
+.idea/
 
 # Logs
 *.log
