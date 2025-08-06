@@ -4,7 +4,6 @@ using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using ServiceDesk.Infrastructure.Messaging.Cache;
 using ServiceDesk.Infrastructure.Messaging.Common;
-using ServiceDesk.Infrastructure.Messaging.Registry;
 using ServiceDesk.Infrastructure.Messaging.Settings;
 using ServiceDesk.Shared.Extensions;
 using ServiceDesk.Shared.Messaging.Interfaces;
@@ -119,7 +118,6 @@ public class RabbitMqConsumerService : IRabbitMqConsumer
     /// </summary>
     /// <param name="message"></param>
     /// <param name="ea"></param>
-    /// <typeparam name="T"></typeparam>
     private void RejectMessage(string message, BasicDeliverEventArgs ea)
     {
         _logger.LogError(message);

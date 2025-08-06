@@ -15,7 +15,7 @@ public static class JsonExtensions
     /// <param name="options"></param>
     /// <typeparam name="T"></typeparam>
     /// <returns></returns>
-    public static string ToJson<T>(this T obj, JsonSerializerOptions options = null) =>
+    public static string ToJson<T>(this T obj, JsonSerializerOptions? options = null) =>
         JsonSerializer.Serialize(obj, options);
 
     /// <summary>
