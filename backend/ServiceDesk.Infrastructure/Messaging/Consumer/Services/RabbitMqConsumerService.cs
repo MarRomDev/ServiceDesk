@@ -7,6 +7,7 @@ using ServiceDesk.Infrastructure.Messaging.Common;
 using ServiceDesk.Infrastructure.Messaging.Registry;
 using ServiceDesk.Infrastructure.Messaging.Settings;
 using ServiceDesk.Shared.Extensions;
+using ServiceDesk.Shared.Messaging.Interfaces;
 
 namespace ServiceDesk.Infrastructure.Messaging.Consumer.Services;
 
@@ -18,15 +19,17 @@ public class RabbitMqConsumerService : IRabbitMqConsumer
     private readonly ILogger<RabbitMqConsumerService> _logger;
     private readonly IModel _channel;
     private readonly IMessageHandlerResolve _handlerResolve;
-    private readonly MessageClassRegistry _registry;
+    private readonly IMessageRegistry _registry;
     private readonly RabbitMqSettings _settings;
+    private readonly IMessageDeserializer  _deserializer;
 
-    public RabbitMqConsumerService(ILogger<RabbitMqConsumerService> logger, IMessageHandlerResolve handlerResolve, MessageClassRegistry registry, RabbitMqSettings settings)
+    public RabbitMqConsumerService(ILogger<RabbitMqConsumerService> logger, IMessageHandlerResolve handlerResolve, IMessageRegistry registry, RabbitMqSettings settings, IMessageDeserializer deserializer)
     {
         _logger = logger;
         _handlerResolve = handlerResolve;
         _registry = registry;
         _settings = settings;
+        _deserializer = deserializer;
 
         var factory = new ConnectionFactory()
         {
@@ -71,7 +74,7 @@ public class RabbitMqConsumerService : IRabbitMqConsumer
 
         try
         {
-            var message = json.FromJson(messageType);
+            var message = _deserializer.Deserialize(json, messageType);
             if (message == null)
             {
                 _channel.BasicAck(ea.DeliveryTag, false);

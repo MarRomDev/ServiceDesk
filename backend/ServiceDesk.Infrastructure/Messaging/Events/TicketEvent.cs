@@ -3,7 +3,7 @@ namespace ServiceDesk.Infrastructure.Messaging.Events;
 /// <summary>
 ///     Klasa bazowa TicketEvent
 /// </summary>
-public class TickedEvent
+public abstract class TicketEvent
 {
     /// <summary>
     ///     Id
