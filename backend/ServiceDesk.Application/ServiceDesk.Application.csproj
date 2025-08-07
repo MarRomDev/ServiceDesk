@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ServiceDesk.Domain\ServiceDesk.Domain.csproj" />
+    <ProjectReference Include="..\ServiceDesk.Shared\ServiceDesk.Shared.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
