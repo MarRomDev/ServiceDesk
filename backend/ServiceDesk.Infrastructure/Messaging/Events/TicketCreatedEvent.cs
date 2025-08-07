@@ -3,7 +3,7 @@ namespace ServiceDesk.Infrastructure.Messaging.Events;
 /// <summary>
 ///     Klasa do tworzenia eventu
 /// </summary>
-public class TicketCreatedEvent : TicketEvent
+public record TicketCreatedEvent : TicketEvent
 {
     /// <summary>
     ///     Data utworzenia

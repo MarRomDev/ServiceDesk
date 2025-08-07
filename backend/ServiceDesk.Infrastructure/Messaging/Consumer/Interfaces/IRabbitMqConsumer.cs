@@ -8,5 +8,5 @@ public interface IRabbitMqConsumer
     /// <summary>
     /// Metoda do obsługi komunikatów
     /// </summary>
-    void StartConsume();
+    void StartConsume(CancellationToken cancellationToken = default);
 }

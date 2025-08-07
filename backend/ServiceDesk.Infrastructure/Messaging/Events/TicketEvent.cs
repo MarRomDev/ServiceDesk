@@ -3,12 +3,12 @@ namespace ServiceDesk.Infrastructure.Messaging.Events;
 /// <summary>
 ///     Klasa bazowa TicketEvent
 /// </summary>
-public abstract class TicketEvent
+public abstract record TicketEvent
 {
     /// <summary>
     ///     Id
     /// </summary>
-    public Guid TicketId { get; set; } =  Guid.NewGuid();
+    public Guid TicketId { get; init; } =  Guid.NewGuid();
     
     /// <summary>
     ///     Tytuł eventu

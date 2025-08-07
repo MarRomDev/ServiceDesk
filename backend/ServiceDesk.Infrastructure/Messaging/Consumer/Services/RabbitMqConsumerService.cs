@@ -1,8 +1,8 @@
+using MediatR;
 using ServiceDesk.Infrastructure.Messaging.Consumer.Interfaces;
 using Microsoft.Extensions.Logging;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
-using ServiceDesk.Infrastructure.Messaging.Cache;
 using ServiceDesk.Infrastructure.Messaging.Common;
 using ServiceDesk.Infrastructure.Messaging.Settings;
 using ServiceDesk.Shared.Extensions;
@@ -20,15 +20,18 @@ public class RabbitMqConsumerService : IRabbitMqConsumer
     private readonly IMessageHandlerResolve _handlerResolve;
     private readonly IMessageRegistry _registry;
     private readonly RabbitMqSettings _settings;
-    private readonly IMessageDeserializer  _deserializer;
+    private readonly IMessageDeserializer _deserializer;
+    private readonly IMediator _mediator;
 
-    public RabbitMqConsumerService(ILogger<RabbitMqConsumerService> logger, IMessageHandlerResolve handlerResolve, IMessageRegistry registry, RabbitMqSettings settings, IMessageDeserializer deserializer)
+    public RabbitMqConsumerService(ILogger<RabbitMqConsumerService> logger, IMessageHandlerResolve handlerResolve,
+        IMessageRegistry registry, RabbitMqSettings settings, IMessageDeserializer deserializer, IMediator mediator)
     {
         _logger = logger;
         _handlerResolve = handlerResolve;
         _registry = registry;
         _settings = settings;
         _deserializer = deserializer;
+        _mediator = mediator;
 
         var factory = new ConnectionFactory()
         {
@@ -36,29 +39,28 @@ public class RabbitMqConsumerService : IRabbitMqConsumer
             Port = settings.Port,
             UserName = settings.Username,
             Password = settings.Password,
-
         };
-        
+
         var connection = factory.CreateConnection();
         _channel = connection.CreateModel();
     }
-    
-    public void StartConsume()
+
+    public void StartConsume(CancellationToken cancellationToken = default)
     {
         var consumer = new AsyncEventingBasicConsumer(_channel);
 
-        consumer.Received += async (_, ea) => { await ProcessMessage(ea); };
+        consumer.Received += async (_, ea) => { await ProcessMessage(ea, cancellationToken); };
 
         foreach (var routingKey in _registry.GetRoutingKeys())
         {
             _channel.QueueDeclare(routingKey, true, false, false, null);
             _channel.QueueBind(routingKey, _settings.Exchange, routingKey);
-            
+
             _channel.BasicConsume(routingKey, false, consumer);
         }
     }
 
-    private async Task ProcessMessage(BasicDeliverEventArgs ea)
+    private async Task ProcessMessage(BasicDeliverEventArgs ea, CancellationToken cancellationToken)
     {
         var routingKey = ea.RoutingKey;
         var messageType = _registry.GetMessageType(routingKey);
@@ -68,7 +70,7 @@ public class RabbitMqConsumerService : IRabbitMqConsumer
             _logger.LogError($"Message type {routingKey} not found");
             return;
         }
-            
+
         var json = ea.Body.ToArray().ToUtf8String();
 
         try
@@ -79,33 +81,28 @@ public class RabbitMqConsumerService : IRabbitMqConsumer
                 _channel.BasicAck(ea.DeliveryTag, false);
                 return;
             }
-                
-            var handler = _handlerResolve.Resolve(messageType);
 
-            if (handler == null)
+            if (typeof(IRequest).IsAssignableFrom(messageType) || messageType.GetInterfaces()
+                    .Any(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IRequest<>)))
             {
-                RejectMessage($"Handler {messageType} nie może być zresolwowany", ea);
-                return;
-            }
+                var response = await _mediator.Send(message, cancellationToken);
 
-            var method = HandlerMethodCache.GetHandleAsyncMethod(handler.GetType());
+                if (!string.IsNullOrWhiteSpace(ea.BasicProperties.ReplyTo))
+                {
+                    var props = _channel.CreateBasicProperties();
+                    props.CorrelationId = ea.BasicProperties.CorrelationId;
 
-            if (method == null)
-            {
-                RejectMessage($"Handler {handler.GetType().Name} nie zawiera metody HandleAsync", ea);
-                return;
-            }
-
-            if (method.Invoke(handler, new[] { message }) is Task task)
-            {
-                await task;
+                    var responseBytes = response.SerializeToUtf8Bytes();
+                    _channel.BasicPublish(exchange: "", routingKey: ea.BasicProperties.ReplyTo, basicProperties: props,
+                        body: responseBytes);
+                }
                 _channel.BasicAck(ea.DeliveryTag, false);
             }
             else
             {
-                RejectMessage("Handler zwrócił null lub nie był typu Task", ea);
+                RejectMessage("Wiadomość nie implementuje IRequest ani IRequest<T>", ea);
             }
-               
+
         }
         catch (Exception e)
         {

@@ -1,10 +1,14 @@
+using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ServiceDesk.Application;
 using ServiceDesk.Infrastructure.Constants;
 using ServiceDesk.Infrastructure.Messaging.Publisher;
 using ServiceDesk.Infrastructure.Messaging.Registry;
 using ServiceDesk.Infrastructure.Messaging.Serialization;
 using ServiceDesk.Infrastructure.Messaging.Settings;
+using ServiceDesk.Persistence.DbContext;
 using ServiceDesk.Shared.Messaging.Interfaces;
 
 namespace ServiceDesk.Infrastructure.DependencyInjection;
@@ -19,6 +23,15 @@ public static class DependencyInjection
         services.AddSingleton<IRabbitMqPublisher, RabbitMqPublisher>();
         services.AddSingleton<IMessageDeserializer, JsonMessageDeserializer>();
         services.AddSingleton<IMessageRegistry, MessageRegistry>();
+        services.AddMediatR(cfg =>
+        {
+            cfg.RegisterServicesFromAssemblyContaining<ApplicationAssemblyMarker>();
+        });
+        services.AddAutoMapper(typeof(ApplicationAssemblyMarker));
+        services.AddDbContext<ServiceDeskDbContext>(options =>
+        {
+            options.UseNpgsql(configuration.GetConnectionString("ServiceDeskDatabase"));
+        });
         
         return services;
     }

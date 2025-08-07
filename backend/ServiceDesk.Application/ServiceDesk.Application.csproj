@@ -3,6 +3,12 @@
   <ItemGroup>
     <ProjectReference Include="..\ServiceDesk.Domain\ServiceDesk.Domain.csproj" />
     <ProjectReference Include="..\ServiceDesk.Shared\ServiceDesk.Shared.csproj" />
+    <ProjectReference Include="..\ServiceDesk.Persistence\ServiceDesk.Persistence.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="MediatR" Version="13.0.0" />
   </ItemGroup>
 
   <PropertyGroup>
