@@ -11,7 +11,7 @@ public class CreateTicketCommandHandler(ServiceDeskDbContext context) : IRequest
     {
         var ticket = new Ticket
         {
-            Id = new Guid(),
+            Id = Guid.NewGuid(),
             Title = request.Title,
             Description = request.Description,
             CreatedAt = DateTime.UtcNow
