@@ -25,9 +25,9 @@ public static class DependencyInjection
         services.AddSingleton<IMessageRegistry, MessageRegistry>();
         services.AddMediatR(cfg =>
         {
-            cfg.RegisterServicesFromAssemblyContaining<IApplicationAssemblyMarker>();
+            cfg.RegisterServicesFromAssemblyContaining<ApplicationAssemblyMarker>();
         });
-        services.AddAutoMapper(typeof(IApplicationAssemblyMarker));
+        services.AddAutoMapper(typeof(ApplicationAssemblyMarker));
         services.AddDbContext<ServiceDeskDbContext>(options =>
         {
             options.UseNpgsql(configuration.GetConnectionString("ServiceDeskDatabase"));

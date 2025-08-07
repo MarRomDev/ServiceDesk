@@ -1,7 +1,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using ServiceDesk.Api.Features.Tickets.Dto;
 using ServiceDesk.Application.Features.Tickets.Commands.CreateTicket;
+using ServiceDesk.Application.Features.Tickets.Dto;
 using ServiceDesk.Application.Features.Tickets.Queries.GetTicketById;
 
 namespace ServiceDesk.Api.Features.Tickets.Controllers;

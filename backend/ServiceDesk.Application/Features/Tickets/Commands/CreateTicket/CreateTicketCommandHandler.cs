@@ -1,12 +1,25 @@
+using AutoMapper;
 using MediatR;
+using ServiceDesk.Domain.Tickets;
+using ServiceDesk.Persistence.DbContext;
 
 namespace ServiceDesk.Application.Features.Tickets.Commands.CreateTicket;
 
-public class CreateTicketCommandHandler : IRequestHandler<CreateTicketCommand, Guid>
+public class CreateTicketCommandHandler(ServiceDeskDbContext context) : IRequestHandler<CreateTicketCommand, Guid>
 {
-    public Task<Guid> Handle(CreateTicketCommand request, CancellationToken cancellationToken)
+    public async Task<Guid> Handle(CreateTicketCommand request, CancellationToken cancellationToken)
     {
-        //TODO: późniejsza logika zapisu do bazy itd.
-        return Task.FromResult(Guid.NewGuid());
+        var ticket = new Ticket
+        {
+            Id = new Guid(),
+            Title = request.Title,
+            Description = request.Description,
+            CreatedAt = DateTime.UtcNow
+        };
+        
+        await context.Tickets.AddAsync(ticket, cancellationToken);
+        await context.SaveChangesAsync(cancellationToken);
+        
+        return ticket.Id;
     }
 }

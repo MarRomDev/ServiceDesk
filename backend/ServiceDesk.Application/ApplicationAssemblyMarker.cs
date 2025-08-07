@@ -1,6 +1,6 @@
 namespace ServiceDesk.Application;
 
-public interface IApplicationAssemblyMarker
+public class ApplicationAssemblyMarker
 {
     
 }
