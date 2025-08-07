@@ -2,6 +2,10 @@
 
 **ServiceDesk** to system zgłoszeń serwisowych typu HelpDesk stworzony w architekturze Clean/CQRS. Projekt służy jako demonstracja wiedzy z zakresu projektowania nowoczesnych aplikacji backendowych w .NET 8.
 
+![.NET](https://img.shields.io/badge/.NET-8.0-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Status](https://img.shields.io/badge/status-in%20development-yellow)
+
 ---
 
 ## 📦 Stack technologiczny
@@ -31,7 +35,7 @@ ServiceDesk.sln
 
 ---
 
-## ✅ Zaimplementowane funkcjonalności
+## ✅ Funkcje już zaimplementowane
 
 - [x] Tworzenie zgłoszenia (`POST /api/tickets`)
 - [x] Pobieranie zgłoszenia po ID (`GET /api/tickets/{id}`)
@@ -43,6 +47,47 @@ ServiceDesk.sln
 - [ ] Dodanie interfejsu do połączenia projektu Application z bazą
 - [ ] Publikacja eventów do RabbitMQ (w trakcie)
 - [ ] Frontend w React (planowany)
+
+---
+
+## 📬 Przykładowe zapytania HTTP
+
+### Tworzenie zgłoszenia
+
+```
+POST /api/tickets
+Content-Type: application/json
+
+{
+  "title": "Problem z drukarką",
+  "description": "Nie drukuje od rana"
+}
+```
+
+### Pobieranie zgłoszenia
+
+```
+GET /api/tickets/{id}
+```
+
+---
+
+## 🔮 Roadmapa
+
+- [ ] 🔧 CRUD dla zgłoszeń
+- [ ] ⏳ Obsługa statusów (open, closed, in-progress)
+- [ ] ✅ Logowanie z Serilog
+- [ ] ⏳ Rejestracja użytkowników
+- [ ] ⏳ Frontend w React (Next.js)
+- [ ] 🔧 Docker Compose + PostgreSQL + RabbitMQ
+
+---
+
+## 🧪 Testowanie (planowane)
+
+- [ ] Testy jednostkowe handlerów
+- [ ] Testy integracyjne endpointów
+- [ ] Testy komunikacji RabbitMQ
 
 ---
 
@@ -77,6 +122,13 @@ ServiceDesk.sln
 
 ---
 
+## 🔗 Przydatne linki
+
+- [Swagger UI](https://localhost:5001/swagger/index.html)
+- [RabbitMQ Management UI](http://localhost:15672)
+
+---
+
 ## 💡 Dlaczego ten projekt?
 
 Projekt został stworzony w celu:
@@ -95,7 +147,6 @@ Email: marcin.romanowski.developer@gmail.com
 
 ---
 
-## 📌 Notatki techniczne
+## 📄 Licencja
 
-- Bazowy `appsettings.json` bez haseł (dane dostępowe trzymane lokalnie)
-- Projekt rozwijany hobbystycznie – część funkcjonalności planowana
+Projekt dostępny na licencji MIT.
