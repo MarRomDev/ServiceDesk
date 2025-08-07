@@ -3,7 +3,7 @@ namespace ServiceDesk.Infrastructure.Messaging.Events;
 /// <summary>
 ///     Klasa do zakańczania eventu
 /// </summary>
-public class TicketClosedEvent : TicketEvent
+public record TicketClosedEvent : TicketEvent
 {
     /// <summary>
     ///     Data zakończenia eventu

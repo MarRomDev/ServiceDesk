@@ -57,5 +57,4 @@ public static class JsonExtensions
     /// <returns></returns>
     public static byte[] SerializeToUtf8Bytes<T>(this T obj, JsonSerializerOptions? options = null)
         => Encoding.UTF8.GetBytes(JsonSerializer.Serialize(obj, options));
-
 }
